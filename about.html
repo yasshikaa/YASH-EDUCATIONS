@@ -38,9 +38,23 @@
 
     <!-- Embed Zia Chat Bot -->
    <script type='text/javascript'> 
- var d=document;s=d.createElement('script');s.type='text/javascript';
-s.defer=true;s.src='https://servicedeskplus-azgarduniverse.msappproxy.net/scripts/initialize-external-sdpchat.js';
-t=d.getElementsByTagName('script')[0];t.parentNode.insertBefore(s,t);
+    var d = document;
+    var s = d.createElement('script');
+    s.type = 'text/javascript';
+    s.defer = true;
+    s.src = 'https://17133-ws22-sdp.ukcustomersuccess.net/scripts/initialize-external-sdpchat.js';
+    
+    // Set the size of the widget
+    s.onload = function() {
+        var chatWidget = document.querySelector('.sdp-chat-widget'); // Replace with the correct class/ID of the widget if available
+        if (chatWidget) {
+            chatWidget.style.width = '400px';  // Set the desired width
+            chatWidget.style.height = '600px'; // Set the desired height
+        }
+    };
+
+    var t = d.getElementsByTagName('script')[0];
+    t.parentNode.insertBefore(s, t);
 </script>
 </body>
 </html>
